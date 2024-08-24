@@ -12,13 +12,22 @@ def main():
     sys.exit(app.exec_())
 
 
-def randomH():
-    number_of_hadith = random.randint(1, 2006)
+def randomHadithNum():
+    return random.randint(1, 2006)
+
+def hadithChapter(hadithNum):
     with open('all_hadiths_clean.csv') as hadiths:
         one_hadith = csv.DictReader(hadiths)
         for row in one_hadith:
-            if int(row['hadith_no']) == (number_of_hadith):
-                return row['chapter'] + row['text_en']
+            if int(row['hadith_no']) == (hadithNum):
+                return row['chapter']
+
+def hadithText(hadithNum):
+    with open('all_hadiths_clean.csv') as hadiths:
+        one_hadith = csv.DictReader(hadiths)
+        for row in one_hadith:
+            if int(row['hadith_no']) == (hadithNum):
+                return row['text_en']
 
 
 class MainWindow(QtWidgets.QMainWindow):
@@ -30,8 +39,14 @@ class MainWindow(QtWidgets.QMainWindow):
         self.randomButton.clicked.connect(self.display_random_hadith)
 
     def display_random_hadith(self):
-        hadith = randomH()
+        hadith_num = randomHadithNum()
+        chapter = hadithChapter(hadith_num)
+
+        hadith = hadithText(hadith_num)
+        hadith = ' '.join(hadith.split())
+
         self.hadithText.setPlainText(hadith)
+        self.chapter.setText(chapter)
 
 if __name__ == "__main__":
     main()

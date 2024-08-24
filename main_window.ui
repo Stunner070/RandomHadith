@@ -464,9 +464,9 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>30</y>
-      <width>351</width>
-      <height>61</height>
+      <y>60</y>
+      <width>281</width>
+      <height>41</height>
      </rect>
     </property>
    </widget>
@@ -474,10 +474,52 @@
     <property name="geometry">
      <rect>
       <x>40</x>
-      <y>120</y>
+      <y>150</y>
       <width>721</width>
       <height>291</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>30</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Chapter:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>120</y>
+      <width>131</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+      <underline>false</underline>
+     </font>
+    </property>
+    <property name="text">
+     <string>Hadith Text:</string>
     </property>
    </widget>
   </widget>
