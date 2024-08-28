@@ -1,13 +1,12 @@
 import sys
 import random_hadith_window as rhw
-import notification_manager as nm
+import custom_notification as cn
 from PyQt5 import QtWidgets, uic
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
     window = rhw.MainWindow()
     window.show()
-    # nm.on_closing(window)
     sys.exit(app.exec_())
 
 if __name__ == "__main__":
