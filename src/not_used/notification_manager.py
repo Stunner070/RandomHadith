@@ -1,7 +1,7 @@
 import hadith_manager as hm
 import time
 import plyer
-from PyQt5 import QtWidgets, uic, QtGui, QtCore
+from PyQt5 import QtCore
 
 def send_notification(self):
     num = hm.randomHadithNum()

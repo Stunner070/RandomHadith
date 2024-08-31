@@ -1,6 +1,5 @@
 import sys
 import random_hadith_window as rhw
-import custom_notification as cn
 from PyQt5 import QtWidgets, uic
 
 def main():

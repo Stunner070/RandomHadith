@@ -11,14 +11,14 @@ from PyQt5 import QtWidgets, uic, QtGui, QtCore
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
         super(MainWindow, self).__init__()
-        uic.loadUi('main_window.ui', self)
+        uic.loadUi("resources/main_window.ui", self)
 
         # Connect button to function
         self.randomButton.clicked.connect(self.display_random_hadith)
 
         # System Tray Icon
         self.tray_icon = QSystemTrayIcon(self)
-        self.tray_icon.setIcon(QtGui.QIcon("hadith_logo.png"))
+        self.tray_icon.setIcon(QtGui.QIcon("resources/hadith_logo.png"))
         self.activate_tray()
 
         # Notification Box
